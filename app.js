@@ -19,3 +19,30 @@ alphabet.split("").forEach(letter => {
   btn.onclick = () => handleGuess(letter, btn);
   lettersDiv.appendChild(btn);
 });
+
+// Update the displayed word
+function updateWordDisplay() {
+  const display = selectedWord
+    .split("")
+    .map(letter => (correctGuesses.includes(letter) ? letter : "_"))
+    .join(" ");
+  wordDisplay.textContent = display;
+}
+
+// Handle a guess
+function handleGuess(letter, button) {
+  button.disabled = true;
+
+  if (selectedWord.includes(letter)) {
+    correctGuesses.push(letter);
+    updateWordDisplay();
+    checkWin();
+  } else {
+    wrongGuesses++;
+    wrongCount.textContent = wrongGuesses;
+    checkLose();
+  }
+}
+
+// Initialize display
+updateWordDisplay();
