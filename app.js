@@ -10,6 +10,7 @@ const wordDisplay = document.getElementById("word");
 const lettersDiv = document.getElementById("letters");
 const wrongCount = document.getElementById("wrong-count");
 const message = document.getElementById("message");
+document.getElementById("reset-button").addEventListener("click", resetGame);
 
 // Display Letters on the buttons
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -19,6 +20,25 @@ alphabet.split("").forEach(letter => {
   btn.onclick = () => handleGuess(letter, btn);
   lettersDiv.appendChild(btn);
 });
+
+// Reset The Game Button
+function resetGame() {
+  // Reset game state
+  selectedWord = words[Math.floor(Math.random() * words.length)];
+  correctGuesses = [];
+  wrongGuesses = 0;
+  wrongCount.textContent = wrongGuesses;
+  message.textContent = "";
+
+  // Enable and reset all letter buttons
+  const buttons = document.querySelectorAll("#letters button");
+  buttons.forEach(btn => {
+    btn.disabled = false;
+  });
+
+  // Update the word display
+  updateWordDisplay();
+}
 
 // Update the displayed word
 function updateWordDisplay() {
