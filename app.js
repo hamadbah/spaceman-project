@@ -55,14 +55,35 @@ function handleGuess(letter, button) {
 
   if (selectedWord.includes(letter)) {
     correctGuesses.push(letter);
+    //console.log(correctGuesses);  Get the letter selected
     updateWordDisplay();
-    checkWin();
+    checkWin(); // To Check if winning
   } else {
     wrongGuesses++;
     wrongCount.textContent = wrongGuesses;
-    checkLose();
+    checkLose(); // To Check if Losing
   }
 }
+
+// Check for winning condition
+function checkWin() {
+  // Check if all the Guessed Letter available and equal to the choosen word letters if it is returning true then it's a winning condition.
+  const wordComplete = selectedWord.split("").every(letter => correctGuesses.includes(letter)); 
+  if (wordComplete) {
+    message.textContent = "Congratulation! You did it.";
+    disableAllButtons();
+  }
+}
+
+// Check for losing condition
+function checkLose() {
+  // This condition check the wrongGuesses is more the maxWrong allowed then marked as losing condition
+  if (wrongGuesses >= maxWrong) {
+    message.textContent = `Game Over - You lost! The word was "${selectedWord}"`;
+  }
+}
+
+
 
 // Initialize display
 updateWordDisplay();
