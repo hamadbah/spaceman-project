@@ -55,7 +55,7 @@ function handleGuess(letter, button) {
 
   if (selectedWord.includes(letter)) {
     correctGuesses.push(letter);
-    //console.log(correctGuesses);  Get the letter selected
+    //  Get the letter selected
     updateWordDisplay();
     checkWin(); // To Check if winning
   } else {
@@ -83,7 +83,11 @@ function checkLose() {
   }
 }
 
-
+// Disable all letter buttons
+function disableAllButtons() {
+  const buttons = document.querySelectorAll("#letters button"); // Get all the buttons that used for the game as letters.
+  buttons.forEach(btn => btn.disabled = true); // Arrow Function to Disable all the buttons
+}
 
 // Initialize display
 updateWordDisplay();
