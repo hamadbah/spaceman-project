@@ -4,6 +4,9 @@ let selectedWord = words[Math.floor(Math.random() * words.length)];
 let correctGuesses = [];
 let wrongGuesses = 0;
 const maxWrong = 6;
+// Define Sound Effect
+const winnerSound = new Audio('sounds/winner.mp3');
+const loserSound = new Audio('sounds/bad-luck.mp3');
 
 // DOM elements
 const wordDisplay = document.getElementById("word");
@@ -29,6 +32,8 @@ function resetGame() {
   wrongGuesses = 0;
   wrongCount.textContent = wrongGuesses;
   message.textContent = "";
+  winnerSound.pause();
+  loserSound.pause();
 
   // Enable and reset all letter buttons
   const buttons = document.querySelectorAll("#letters button");
@@ -71,6 +76,7 @@ function checkWin() {
   const wordComplete = selectedWord.split("").every(letter => correctGuesses.includes(letter)); 
   if (wordComplete) {
     message.textContent = "Congratulation! You did it.";
+    winnerSound.play();
     disableAllButtons();
   }
 }
@@ -79,7 +85,9 @@ function checkWin() {
 function checkLose() {
   // This condition check the wrongGuesses is more the maxWrong allowed then marked as losing condition
   if (wrongGuesses >= maxWrong) {
-    message.textContent = `Game Over - You lost! The word was "${selectedWord}"`;
+    message.textContent = `Game Over - You lost! The word was --- ${selectedWord}`;
+    loserSound.play();
+    disableAllButtons();
   }
 }
 
