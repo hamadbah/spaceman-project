@@ -1,4 +1,4 @@
-# 🌌 Spacemen Word Guess Game
+# Spacemen Word Guess Game
 
 Hi! This is a fun word guessing game I made called **Spacemen**. The goal is to guess the word before you run out of tries!
 
@@ -15,16 +15,20 @@ Hi! This is a fun word guessing game I made called **Spacemen**. The goal is to 
 
 ---
 
-## 📁 Files in This Project
+## Files in This Project
 
 Here’s what’s included:
 
-*   index.html
-*   app.js
 *   css/
     *   style.css
 *   images/
     *   ga-banner.png
+    *   ScreenShot.png
+*   sounds
+    *   bad-luck.mp3
+    *   winner.mp3
+*   app.js
+*   index.html
 *   README.md
 
 
@@ -190,11 +194,146 @@ _**Start the Game**_
 
 `updateWordDisplay();`
 
+## Style.css
+
+Below is the CSS Code used:
+
+_**Body Styling**_
+```css
+body {
+  font-family: Arial, sans-serif;
+  background: rgb(83, 3, 110);
+  color: black;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+```
+_**h1 Styling**_
+```css
+h1 {
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 2px 2px 10px #000, 0 0 15px #00ffea;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+```
+_**Intro Text Class Styling**_
+```css
+.intro-text {
+  font-size: 1.2em;
+  color: #000;
+  background-color: #ffffffaa; /* Semi-transparent white */
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+```
+_**Word Styling**_
+```css
+#word {
+  color: white;
+  font-size: 3em;
+  letter-spacing: 10px;
+  margin: 20px;
+  text-transform: uppercase;
+}
+```
+_**Wrong Guess Styling**_
+```css
+.wrong-guesses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bolder;
+}
+```
+_**Letters Styling**_
+```css
+#letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+```
+_**Letters Button Styling**_
+```css
+#letters button {
+  background-color: #282c34;
+  color: #00ffea;
+  border: 2px solid #00ffea;
+  border-radius: 10px;
+  padding: 18px 24px;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+```
+_**Hover Styling**_
+```css
+#letters button:hover:not(:disabled) {
+  background-color: #00ffea;
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00ffea;
+}
+```
+_**Message Styling**_
+```css
+#message {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+```
+_**Reset Button Styling**_
+```css
+#reset-button {
+  padding: 14px 32px;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #ff4d4d;
+  color: white;
+  border: 2px solid #ffcccc;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(255, 77, 77, 0.4);
+}
+```
+_**Reset Button Hover Styling**_
+```css
+#reset-button:hover {
+  background-color: #ff1a1a;
+  color: #fff;
+  transform: scale(1.5);
+  box-shadow: 0 6px 16px rgba(255, 77, 77, 0.6);
+}
+```
 
 ## 📸 Screenshot
 
-> (You can add a screenshot here if you want to show what the game looks like.)
+![Screen Shot](images/ScreenShot.png)
+
+> This screenshot is to show how the game looks like.
 
 ---
 
-Hope you enjoy playing it! 🚀
+> Hope you enjoy playing it!
