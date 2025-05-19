@@ -14,6 +14,8 @@ Hi! This is a fun word guessing game I made called **Spacemen**. The goal is to 
 - There's a **Reset Game** button if you want to play again.
 
 ---
+🔗 [Live Demo](https://hamadbah.github.io/spaceman-project/)
+---
 
 ## Files in This Project
 
