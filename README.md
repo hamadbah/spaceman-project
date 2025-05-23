@@ -113,6 +113,8 @@ alphabet.split("").forEach(letter => {
   lettersDiv.appendChild(btn);
 });
 ```
+[Link to split Source](https://www.w3schools.com/jsref/jsref_split.asp)
+
 _**Reset The Game**_
 
 ```javascript
@@ -139,6 +141,10 @@ function updateWordDisplay() {
   wordDisplay.textContent = display;
 }
 ```
+
+[Link to map Source](https://www.w3schools.com/jsref/jsref_map.asp)
+
+[Link to join Source](https://www.w3schools.com/jsref/jsref_join.asp)
 
 _**Handle Guess**_
 
