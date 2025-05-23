@@ -50,6 +50,8 @@ Hi! This is a fun word guessing game. It is called **Spaceman**. The goal is to 
 
 ---
 
+## 🛠️ Code Overview
+
 ### index.html File
 
 ```javascript 
@@ -72,8 +74,6 @@ Hi! This is a fun word guessing game. It is called **Spaceman**. The goal is to 
  </body> 
  </html> 
  ```
-
-## 🛠️ Code Overview
 
 ### JavaScript (Game Logic)
 
