@@ -1,6 +1,6 @@
-# Spacemen Word Guess Game
+# Spaceman Game
 
-Hi! This is a fun word guessing game I made called **Spacemen**. The goal is to guess the word before you run out of tries!
+Hi! This is a fun word guessing game. It is called **Spaceman**. The goal is to guess al the letters to complete the choosen word before you run out of tries!
 
 ![Banner](images/ga-banner.png)
 ---
@@ -9,17 +9,15 @@ Hi! This is a fun word guessing game I made called **Spacemen**. The goal is to 
 
 - The game will choose a random word related to space.
 - You need to guess the word by click on the letters.
-- If you guess wrong letter, it counts as a mistake. You only get 6 chances!
-- If you guess all the letters before hitting 6 wrong guesses, you win!
-- There's a **Reset Game** button if you want to play again.
+- If you guess wrong letter, it counts as a mistake. You only get 6 chances before marked as _**Game Over**!_
+- If you guess all the letters before hitting 6 wrong guesses, you will be marked as _**Winner!**_
+- There's a _**Reset Game**_ button if you want to play again.
 
 ---
 🔗 [Live Demo](https://hamadbah.github.io/spaceman-project/)
 ---
 
-## Files in This Project
-
-Here’s what’s included:
+## Project Structure
 
 *   css/
     *   style.css
@@ -44,7 +42,7 @@ Here’s what’s included:
 
 ---
 
-## Methods Used in This Project
+## Technologies Used in This Project
 
 - HTML
 - CSS
@@ -52,16 +50,16 @@ Here’s what’s included:
 
 ---
 
-## index.html file
+### index.html File
 
 ```javascript 
  <!DOCTYPE html> <html lang="en"> 
  <head> <meta charset="UTF-8" /> 
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Spacemen Word Guess Game</title> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Spaceman Word Guess Game</title> 
  <script src="app.js" defer></script> 
  <link rel="stylesheet" href="./css/style.css" /> 
- </head> <body> <img src="images/ga-banner.png" alt="Spacemen Banner" class="banner-image" /> 
- <h1>Spacemen ... Guess Game</h1> 
+ </head> <body> <img src="images/ga-banner.png" alt="Spaceman Banner" class="banner-image" /> 
+ <h1>Spaceman ... Guess Game</h1> 
  <p class="intro-text">Guess the word that related to space!</p> 
  <div id="word"></div> 
  <div class="wrong-guesses"> 
@@ -74,8 +72,6 @@ Here’s what’s included:
  </body> 
  </html> 
  ```
-
-## Javascript - Game Logic
 
 ## 🛠️ Code Overview
 
@@ -196,7 +192,7 @@ _**Start the Game**_
 
 `updateWordDisplay();`
 
-## Style.css
+### Style.css
 
 Below is the CSS Code used:
 
