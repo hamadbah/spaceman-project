@@ -17,6 +17,19 @@ Hi! This is a fun word guessing game. It is called **Spaceman**. The goal is to 
 🔗 [Live Demo](https://hamadbah.github.io/spaceman-project/)
 ---
 
+## Project Planning
+
+1. Define the game variables.
+2. Define Sound element.
+3. Get HTML DOM Element.
+4. System will generate the random word.
+5. Player need to guess the letters of the random words to win.
+6. Players has limit of 6 chances to try.
+7. Invoke Function to check if the letter guessed is the correct one.
+8. Notify the players in case winning or losing.
+9. Click on Reset Button to reset the game.
+
+
 ## Project Structure
 
 *   css/
